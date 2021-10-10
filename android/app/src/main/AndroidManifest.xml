@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.funakoshi.devexample.flutter_first_tutorial">
+    package="com.example.flutter_first_tutorial">
    <application
         android:label="flutter_first_tutorial"
         android:icon="@mipmap/ic_launcher">

@@ -1,4 +1,4 @@
-package com.funakoshi.devexample.flutter_first_tutorial
+package com.example.flutter_first_tutorial
 
 import io.flutter.embedding.android.FlutterActivity
 
