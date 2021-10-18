@@ -23,4 +23,4 @@ class MyApp extends StatelessWidget{  //1層（土台）
 // 1. 起動時に最初に呼び出されるのは、main関数。
 // 2. main関数からrunApp関数を呼び出すことで、アプリが実行される。
 // 3. runApp関数に引数で指定した、StatelessWidgetを継承したクラスがアプリ本体のUIとなる。
-// 4. StatelessWidgetを継承したクラスには、build関数を用意し、MaterialAppインスタンスをr
+// 4. StatelessWidgetを継承したクラスには、build関数を用意し、MaterialAppインスタンスを返す
