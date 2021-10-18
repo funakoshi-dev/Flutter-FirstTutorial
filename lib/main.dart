@@ -2,7 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: FirstRoute()));
+  runApp(MaterialApp(
+    initialRoute: "/first",
+    routes: <String, WidgetBuilder>{
+      "/first":(BuildContext context) => FirstRoute(),
+      "/second":(BuildContext context) => SecondRoute(),
+    },
+  ));
 }
 
 class FirstRoute extends StatelessWidget {
@@ -18,7 +24,7 @@ class FirstRoute extends StatelessWidget {
           children: <Widget>[
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => SecondRoute()));
+                Navigator.pushNamed(context, "/second");
               },
               child: Text(
                 "Push Here",
