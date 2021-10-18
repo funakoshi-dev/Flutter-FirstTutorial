@@ -1,4 +1,6 @@
 # This is a generated file; do not edit or check into version control.
+firebase_core=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.7.0/
+firebase_core_web=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.1+3/
 path_provider_linux=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.0/
 path_provider_windows=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.3/
 shared_preferences=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.8/
