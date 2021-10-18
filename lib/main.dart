@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -20,8 +21,9 @@ class FirstRoute extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
+            FloatingButton(),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, "/second");
@@ -63,3 +65,46 @@ class SecondRoute extends StatelessWidget {
     );
   }
 }
+
+class FloatingButton extends StatefulWidget{
+
+  @override
+  ButtonState createState() => ButtonState();
+}
+
+class ButtonState extends State{
+
+  Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
+  Future<int> getCount() async {
+    SharedPreferences prefs = await _prefs;
+    return (prefs.getInt('counter') ?? 0);
+  }
+
+  int _counter = 0;
+  void incrementCounter() async{
+    SharedPreferences prefs = await _prefs;
+    setState((){
+      _counter = (prefs.getInt('counter') ?? 0) + 1;
+    });
+    await prefs.setInt('counter', _counter);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    getCount().then((value){
+      setState(() {
+        _counter = value;
+      });
+    });
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text("$_counter"),
+        FloatingActionButton(onPressed: incrementCounter),
+      ],
+    );
+  }
+
+}
+
