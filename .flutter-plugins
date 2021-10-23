@@ -1,9 +1,10 @@
 # This is a generated file; do not edit or check into version control.
-cloud_firestore=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.12.11/
-firebase_analytics=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-5.0.16/
+cloud_firestore=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.4/
+cloud_firestore_web=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.2.1+2/
+firebase_analytics=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-6.3.0/
 firebase_analytics_web=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics_web-0.1.1/
-firebase_core=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/
-firebase_core_web=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/
+firebase_core=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.3/
+firebase_core_web=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.1+1/
 path_provider_linux=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.0/
 path_provider_windows=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.3/
 shared_preferences=/Applications/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.8/
