@@ -77,9 +77,11 @@ class FloatingButton extends StatefulWidget {
 }
 
 class ButtonState extends State {
+  //インスタンス作成
   Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   FirebaseFirestore _db = FirebaseFirestore.instance;
 
+  //SharedPreferencesのロードメソッド
   Future<int> getCount() async {
     SharedPreferences prefs = await _prefs;
     return (prefs.getInt('counter') ?? 0);
@@ -90,6 +92,7 @@ class ButtonState extends State {
   //FireStore
   int _counter2 = 0;
 
+  //ボタン押下時
   void incrementCounter() async {
     //■■■読み込み
     //SharedPreference
@@ -101,7 +104,7 @@ class ButtonState extends State {
     //単純に取り出すメソッド'get('フィールド')'メソッドではなく、data()メソッドを使って一度Map型に変換
     Map<String, dynamic> fields = doc.data() ?? {'count':0};
 
-    //■■■変数に代入
+    //■■■１足して変数に代入
     setState(() {
       //SharedPreference
       _counter = (prefs.getInt('counter') ?? 0) + 1;
@@ -123,6 +126,7 @@ class ButtonState extends State {
 
   @override
   Widget build(BuildContext context) {
+    //SharedPreferencesのロード（ボタン押下前(初回)ロードになる)
     getCount().then((value) {
       setState(() {
         _counter = value;
