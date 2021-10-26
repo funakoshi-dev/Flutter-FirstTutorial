@@ -288,8 +288,8 @@ class _UpdateUserDialogState extends State<UpdateUserDialog> {
       actions: [
         TextButton(
           onPressed: () {
-            widget.user!.updateDisplayName(_nameController!.text);
-            widget.user!.updatePhotoURL(_urlController!.text);
+            // widget.user!.updateDisplayName(_nameController!.text);
+            // widget.user!.updatePhotoURL(_urlController!.text);
 
             Navigator.of(context).pop();
           },
