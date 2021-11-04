@@ -11,9 +11,9 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
 
 /// Entrypoint example for registering via Email/Password.
 class RegisterPage extends StatefulWidget {
-  static const String id = 'register_page';
   /// The page title.
   final String title = 'Registration';
+  static const String id = 'register_page';
 
   @override
   State<StatefulWidget> createState() => _RegisterPageState();

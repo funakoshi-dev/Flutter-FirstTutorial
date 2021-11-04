@@ -3,6 +3,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
@@ -32,11 +33,10 @@ class ScaffoldSnackbar {
 /// Entrypoint example for various sign-in flows with Firebase.
 class SignInPage extends StatefulWidget {
   SignInPage({Key? key}) : super(key: key);
-  static const String id = 'signin_page';
 
   /// The page title.
   final String title = 'Sign In & Out';
-
+  static const String id = 'signin_page';
   @override
   State<StatefulWidget> createState() => _SignInPageState();
 }
