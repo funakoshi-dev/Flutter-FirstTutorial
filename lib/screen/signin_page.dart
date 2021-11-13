@@ -6,6 +6,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import './chat.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -386,7 +387,9 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
         password: _passwordController.text,
       ))
           .user!;
-      ScaffoldSnackbar.of(context).show('${user.email} signed in');
+      if(user!=null){
+        Navigator.pushNamed(context, ChatPage.id);
+      }
     } catch (e) {
       ScaffoldSnackbar.of(context)
           .show('Failed to sign in with Email & Password');
